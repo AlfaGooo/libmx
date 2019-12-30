@@ -71,7 +71,10 @@ int mx_list_size(t_list *list);
 void mx_pop_front(t_list **head);
 void mx_pop_back(t_list **head);
 t_list *mx_sort_list(t_list *lst, bool (*cmp)(void *, void *));
+
+
 char *mx_strchr(const char *str, char c);
+size_t mx_msize(void * p);
 
 #endif
 

@@ -2,10 +2,10 @@
 
 char *mx_replace_substr(const char *str, const char *sub, const char *replace)
 {
+    char *newstr = str;
+    
     if(str == NULL || sub == NULL || replace == NULL)
         return NULL;
-    
-    char *newstr = str;
     for(int i = 0; str[i] != '\0'; i++)
     {
         if(str[i] == sub[i])
