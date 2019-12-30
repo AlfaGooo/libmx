@@ -45,6 +45,7 @@ install:
 	@ar -rcs libmx.a $(OBJ)
 
 uninstall: clean
+,a
 	@rm -rf $(NAME)
 
 clean:
