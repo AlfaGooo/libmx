@@ -1,43 +1,44 @@
 #include "../inc/libmx.h"
 
-//валеры код
-// char *mx_itoa(int number){
-//     char *rez = mx_strnew(11);
-//     if (!rez)
-//         return NULL;
-//     unsigned int k = 0, num = (number >= 0) ? number : -number;
-//     if (number == 0)
-//         rez[k++] = '0';
-//     else {
-//         if (number < 0)
-//             rez[k++] = '-';
-//         for (unsigned int r = 1000000000; r > 0; r /= 10)
-//             if (num >= r)
-//                 rez[k++] = '0' + ((num / r) % 10);
-//         }
-//     return mx_realloc(rez, (k + 1) * sizeof(char));
-// }
-// //не готов
+
+//int mx_num_len
+static int	count(int num) {
+	int i = 0;
+
+	if (num == 0)
+		return 1;
+	if (num < 0)
+		i++;
+	while (num) {
+		num /= 10;
+		i++;
+	}
+	return i;
+}
 
 
-// char *itoa(int number, char *destination, int base) {
-//   int count = 0;
-//   do {
-//     int digit = number % base;
-//     destination[count++] = (digit > 9) ? digit - 10 +'A' : digit + '0';
-//   } 
-//     while ((number /= base) != 0);
-//   destination[count] = '\0';
-//   int i;
-//   for (i = 0; i < count / 2; ++i) {
-//     char symbol = destination[i];
-//     destination[i] = destination[count - i - 1];
-//     destination[count - i - 1] = symbol;
-//   }
-//   return destination;
-// }
+char *mx_itoa(int number) {
+	char *res = NULL;
+	int	i = count(number);
+	int j = 0;
+
+	if (number == -2147483648)
+		return "-2147483648";
+	res = mx_strnew(i);
+	if (number < 0) {
+		res[0] = '-';
+		number *= -1;
+		j++;
+	}
+	for(; i > j; i--) {
+		res[i - 1] = number % 10 + 48;
+		number /= 10;
+	}
+	return res;
+}
 
 int main()
 {
-    printf("%s", mx_itoa(3458));
+    printf("%s", mx_itoa(48));
 }
+// не принимает больше значение

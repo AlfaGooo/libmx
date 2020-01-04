@@ -6,11 +6,11 @@ int mx_count_words(const char *str, char c) {
     if (!str)
         return -1;
     if (c == '\0')
-	    return 1;
+        return 1;
     while (*(++str)) {
-            if (*str != c)
-                if (++count && !(str = mx_strchr(str, c)))
-                    return count;
+        if (*str != c)
+            if (++count && !(str = mx_strchr(str, c)))
+                return count;
     }
     return count;
 }

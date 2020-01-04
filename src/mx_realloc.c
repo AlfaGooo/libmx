@@ -26,7 +26,7 @@ size_t mx_msize(void * p) {
 
 
 void *mx_realloc(void *ptr, size_t size) {
-    int msize = mx_msize(ptr);
+    size_t msize = mx_msize(ptr);
     void *newptr;
 
     if (size <= msize)

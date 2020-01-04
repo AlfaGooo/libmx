@@ -14,13 +14,14 @@ static void f_hex(int nbr, int temp, char *hexNumb, int i) {
 
 char *mx_nbr_to_hex(unsigned long nbr) {
     int i = 1;
-    int k;
-    int temp;
-    char *hexNumb = strnew(sizeof(char*));
-    char *hex = strnew(sizeof(char*));
+    int k = 0;
+    int temp = 0;
+    char *hexNumb = mx_strnew(sizeof(char*));
+    char *hex = mx_strnew(sizeof(char*));
 
     f_hex(nbr, temp, hexNumb, i);
-    for (int j = i - 1, k = 0; j >= 0; j--, k++)
-        hex[k] = hexNumb[j];
+    for (i = i - 1; i >= 0; i--, k++)
+        hex[k] = hexNumb[i];
     return hex;
 }
+

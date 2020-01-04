@@ -32,4 +32,4 @@ int mx_quicksort(char **arr, int left, int right) {
 //   return 0;
 // }
 
-питонуттор
+//питонуттор

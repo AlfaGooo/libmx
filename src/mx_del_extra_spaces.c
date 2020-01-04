@@ -18,4 +18,3 @@ char *mx_del_extra_spaces(const char *str)
     free(tmp_str);
     return new_str;
 }
-

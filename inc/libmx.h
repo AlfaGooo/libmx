@@ -56,7 +56,7 @@ char *mx_file_to_str(const char *file);
 t_list  *mx_create_node(void *data);
 void mx_push_front(t_list **list, void *data);
 void mx_push_back(t_list **list, void *data);
-int mx_read_line(char **lineptr, int buf_size, char delim, const int fd);
+int mx_read_line(char **lineptr, int buf_size, int delim, const int fd);
 char *mx_replace_substr(const char *str, const char *sub, const char *replace);
 void *mx_memset(void *b, int c, size_t len);
 void *mx_memcpy(void *restrict dst, const void *restrict src, size_t n);
@@ -71,6 +71,7 @@ int mx_list_size(t_list *list);
 void mx_pop_front(t_list **head);
 void mx_pop_back(t_list **head);
 t_list *mx_sort_list(t_list *lst, bool (*cmp)(void *, void *));
+int mx_count_words(const char *str, char c);
 
 
 char *mx_strchr(const char *str, char c);

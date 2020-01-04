@@ -1,40 +1,23 @@
-char **mx_strsplit(const char *s, char c) {
-    char **new_s;
-    int mass_start = 0;
-    int j = 0;
-    int mass_size = mx_count_words(s, c); //return 3  нужно ли считать слова?
+#include "../inc/libmx.h"
 
-    for (int i = 0; s[i]; i++) {
-        if (s[i] == c)
-            mx_swap_char(s[i], ' ');
-    }
-    s = mx_del_extra_spaces(s); //["Good bye, Mr. Anderson."]
-    for (int i = 0; s[i] != '\0' && mass_start <= mass_size; i++) {    
-        for (int i = j; s[i] != ',' || '.'; i++, j++);
-        new_s[mass_start] = mx_strnew(j - i);
-        for (int i = 0; i <= j; i++)
-            new_s[mass_start][i] = s[i];
-        mass_start++;
-    }
-    return new_s;
+
+//valeriy
+char **mx_strsplit(char const *s, char c) {
+    int count = mx_count_words(s--, c);
+    int h = 0;
+    char **arr = malloc((count + 1) * sizeof(char *));
+    char *next;
+
+    if ((!s) || (!arr))
+        return NULL;
+    arr[count] = NULL;
+    while (*(++s))
+        if (*s != c && ((next = mx_strchr(s, c)) 
+            || (next = mx_strchr(s, '\0'))) 
+            && (arr[h++] = mx_strndup(s, next - s)) 
+            && (s = next) && !(*s))
+            return arr;
+    return arr;
 }
 
-
-// char *mx_del_extra_spaces(const char *str) {
-//     char *tmp_str = mx_strnew(mx_strlen(str));
-//     char *new_str;
-
-//     if (!str)
-//         return NULL;
-//     for (int i = 0; str[i] != '\0'; i++) {
-//         if (!(mx_is_delim(tmp_str[i]))) {
-//             if (mx_is_delim(tmp_str[i++]) && tmp_str[i++]) != '\0')
-//             tmp_str[i] = ' ';
-//         }
-//     }
-//     new_str = mx_strtrim(tmp_str);
-//     free(tmp_str)
-//     return new_str;
-// }
-
-//написать ис спейс и функцию ис делим
+//olya
