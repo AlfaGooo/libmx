@@ -1,8 +1,8 @@
 #include "../inc/libmx.h"
 
-char *mx_strcpy(char *dst, const char *src) {
+char *mx_strcpy(char *dst, const char *src)
+{
     char *copy = dst;
-
-    while ((*dst++ = *src++));
+    while((*dst++ = *src++));
     return copy;
 }

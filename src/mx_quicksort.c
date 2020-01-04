@@ -14,7 +14,7 @@ int mx_quicksort(char **arr, int left, int right) {
                 first++;
             while (mx_strlen(arr[last]) > mx_strlen(arr[mid]))
                 last--;
-            mx_swap_char(arr[first], arr[last])
+            mx_swap_char(arr[first], arr[last]);
         }
         mx_quicksort(arr, first, right);
         mx_quicksort(arr, left, last);
@@ -32,3 +32,4 @@ int mx_quicksort(char **arr, int left, int right) {
 //   return 0;
 // }
 
+питонуттор

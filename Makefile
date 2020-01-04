@@ -8,7 +8,7 @@ src/mx_pop_front.c src/mx_pow.c src/mx_print_strarr.c src/mx_print_unicode.c src
 src/mx_push_back.c src/mx_push_front.c src/mx_quicksort.c src/mx_read_line.c src/mx_realloc.c src/mx_replace_substr.c src/mx_sort_list.c \
 src/mx_sqrt.c src/mx_str_reverse.c src/mx_strcat.c src/mx_strcmp.c src/mx_strcpy.c src/mx_strdel.c src/mx_strdup.c src/mx_strjoin.c \
 src/mx_strlen.c src/mx_strncpy.c src/mx_strndup.c src/mx_strnew.c src/mx_strsplit.c src/mx_strstr.c src/mx_strtrim.c src/mx_swap_char.c \
-src/mx_msize.c src/mx_strchr.c\
+src/mx_msize.c src/mx_strchr.c src/mx_strncat.c \
 
 
 SRCOB = mx_printchar.o mx_binary_search.o mx_bubble_sort.o mx_count_substr.o mx_count_words.o mx_create_node.o mx_del_extra_spaces.o \
@@ -17,7 +17,7 @@ mx_isspace.o mx_itoa.o mx_list_size.o mx_memccpy.o mx_memchr.o mx_memcmp.o mx_me
 mx_memset.o mx_nbr_to_hex.o mx_pop_back.o mx_pop_front.o mx_pow.o mx_print_strarr.o mx_print_unicode.o mx_printint.o \
 mx_printstr.o mx_push_back.o mx_push_front.o mx_quicksort.o mx_read_line.o mx_realloc.o mx_replace_substr.o mx_sort_list.o mx_sqrt.o \
 mx_str_reverse.o mx_strcat.o mx_strcmp.o mx_strcpy.o mx_strdel.o mx_strdup.o mx_strjoin.o mx_strlen.o mx_strncpy.o mx_strndup.o \
-mx_strnew.o mx_strsplit.o mx_strstr.o mx_strtrim.o mx_swap_char.o mx_msize.o mx_strchr.o \
+mx_strnew.o mx_strsplit.o mx_strstr.o mx_strtrim.o mx_swap_char.o mx_msize.o mx_strchr.o mx_strncat.o \
 
 
 
@@ -31,7 +31,7 @@ obj/mx_pop_front.o obj/mx_pow.o obj/mx_print_strarr.o obj/mx_print_unicode.o obj
 obj/mx_push_back.o obj/mx_push_front.o obj/mx_quicksort.o obj/mx_read_line.o obj/mx_realloc.o obj/mx_replace_substr.o obj/mx_sort_list.o \
 obj/mx_sqrt.o obj/mx_str_reverse.o obj/mx_strcat.o obj/mx_strcmp.o obj/mx_strcpy.o obj/mx_strdel.o obj/mx_strdup.o obj/mx_strjoin.o \
 obj/mx_strlen.o obj/mx_strncpy.o obj/mx_strndup.o obj/mx_strnew.o obj/mx_strsplit.o obj/mx_strstr.o obj/mx_strtrim.o obj/mx_swap_char.o \
-obj/mx_msize.o obj/mx_strchr.o \
+obj/mx_msize.o obj/mx_strchr.o obj/mx_strncat.o \
 
 
 DIR = obj/

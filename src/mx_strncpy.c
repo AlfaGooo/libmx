@@ -8,3 +8,10 @@ char *mx_strncpy(char *dst, const char *src, int len) {
     dst[i] = '\0';
     return dst;
 }
+// int main()
+// {
+//     int a = 3;
+//     const char *c = "combat";
+//     char *n = "ffffff";
+//     printf("%s", mx_strncpy(n, c, a));
+// }

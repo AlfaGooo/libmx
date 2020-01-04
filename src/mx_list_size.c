@@ -1,42 +1,24 @@
 #include "../inc/libmx.h"
 
-int mx_list_size(t_list *list) {
-    int i = 0;
-
-    while (list) {
-        list = list->next;
-        i++;        
-    }
-    return i;
-}
-
-https://www.tutorialspoint.com/learn_c_by_examples/size_of_doubly_linked_list_in_c.htm
-
- int mx_list_size(t_list *list)
- {
- 	t_list *i = list;
- 	int count = 0;
- 	while(i)
-	{
-		i = i->next;
-		count++;
-	}
-	return count;
-}
 
 
+//https://www.tutorialspoint.com/learn_c_by_examples/size_of_doubly_linked_list_in_c.htm
+
+
+//валеры
 int mx_list_size(t_list *list){
-    int i = 1;
+    int count = 1;
+    t_list *temp = list;
     
     if (list == NULL)
         return 0;
-    t_list *temp = list;
-    while (temp -> next != NULL) {
+    while (temp->next != NULL) {
         temp = temp->next;
-        i++;
+        count++;
     }
-    return i;
+    return count;
 }
+
 
 int mx_list_size(t_list *list) {
     t_list *current_node = list;
@@ -46,5 +28,5 @@ int mx_list_size(t_list *list) {
         current_node = current_node->next;
         count++;
     }
-    return count;  
+    return count;
 }

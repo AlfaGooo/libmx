@@ -24,4 +24,3 @@ char *mx_nbr_to_hex(unsigned long nbr) {
         hex[k] = hexNumb[j];
     return hex;
 }
-
