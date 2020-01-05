@@ -21,15 +21,3 @@ int mx_quicksort(char **arr, int left, int right) {
     }
     return count;
 }
-
-
-// int main() {
-  
-//   char *arr[] = {"michelangelo", "zonlo", "ardo", "Raphael", "vova", "mikeed"};
-//   printf("%d", mx_quicksort(arr, 0, 5));
- 
-
-//   return 0;
-// }
-
-//питонуттор

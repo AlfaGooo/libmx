@@ -11,4 +11,3 @@ t_list *mx_create_node(void *data) {
     }
     return 0;
 }
-

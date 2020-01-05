@@ -7,6 +7,5 @@ char *mx_strnew(const int size) {
         return NULL;
     for (int i = 0; i < size; i++)
         new[i] = '\0';
-    new[size] = '\0';
     return new;
 }

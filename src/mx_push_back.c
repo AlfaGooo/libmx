@@ -2,6 +2,7 @@
 
 void mx_push_back(t_list **list, void *data) {
     t_list *p = mx_create_node(data);
+    t_list *last;
 
     if ((p == NULL) || (list == NULL))
         return;
@@ -10,11 +11,9 @@ void mx_push_back(t_list **list, void *data) {
     if (*list == NULL)
         *list = p;
     else {
-        t_list *last = *list;
+        last = *list;
         while (last->next != NULL)
             last = last->next;
         last->next = p;
     }
 }
-//https://www.geeksforgeeks.org/vectorpush_back-vectorpop_back-c-stl/
-

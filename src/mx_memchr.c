@@ -10,6 +10,3 @@ void *mx_memchr(const void *s, int c, size_t n) {
 	}
 	return 0;
 }
-
-//поиск первого вхождения указанного символа в массиве.
-

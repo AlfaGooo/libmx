@@ -1,6 +1,5 @@
 #include "../inc/libmx.h"
 
-
 //int mx_num_len
 static int	count(int num) {
 	int i = 0;
@@ -15,7 +14,6 @@ static int	count(int num) {
 	}
 	return i;
 }
-
 
 char *mx_itoa(int number) {
 	char *res = NULL;
@@ -36,9 +34,3 @@ char *mx_itoa(int number) {
 	}
 	return res;
 }
-
-int main()
-{
-    printf("%s", mx_itoa(48));
-}
-// не принимает больше значение

@@ -15,19 +15,3 @@ char *mx_strjoin(const char *s1, const char *s2) {
     }
     return NULL;
 }
-
-
-
-// int main()
-// {
-//     char *str1 = "this";
-//     char *str2 = "dodge ";
-//     char *str3 = NULL;
-//    // mx_strjoin(str2, str1); //returns "dodge this"
-//   //  mx_strjoin(str1, str3); //returns "this"
-//   //  mx_strjoin(str3, str3); //returns NULL
-//     printf("%s\n", mx_strjoin(str2, str1));
-//     printf("%s\n", mx_strjoin(str1, str3));
-//     printf("%s", mx_strjoin(str3, str3));
-
-// }

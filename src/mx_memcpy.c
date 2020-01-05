@@ -8,4 +8,3 @@ void *mx_memcpy(void *restrict dst, const void *restrict src, size_t n) {
 		dst2[i] = src2[i];
 	return dst2;
 }
-

@@ -1,6 +1,6 @@
 #include "../inc/libmx.h"
 
-//?
+// не рабочий 
 char *mx_del_extra_spaces(const char *str)
 {
     char *tmp_str = mx_strnew(mx_strlen(str));
@@ -18,3 +18,11 @@ char *mx_del_extra_spaces(const char *str)
     free(tmp_str);
     return new_str;
 }
+
+// int main() {
+// 	char *name =  "\f  My name...     is  \r Neo  \t\n ";
+// 	printf("%s\n", mx_del_extra_spaces(name));
+// 	return 0;
+// }
+
+

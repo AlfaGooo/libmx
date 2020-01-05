@@ -1,7 +1,5 @@
 #include "../inc/libmx.h"
 
-
-//valeriy
 char **mx_strsplit(char const *s, char c) {
     int count = mx_count_words(s--, c);
     int h = 0;
@@ -11,7 +9,7 @@ char **mx_strsplit(char const *s, char c) {
     if ((!s) || (!arr))
         return NULL;
     arr[count] = NULL;
-    while (*(++s))
+    while (*(s++))
         if (*s != c && ((next = mx_strchr(s, c)) 
             || (next = mx_strchr(s, '\0'))) 
             && (arr[h++] = mx_strndup(s, next - s)) 
@@ -19,5 +17,3 @@ char **mx_strsplit(char const *s, char c) {
             return arr;
     return arr;
 }
-
-//olya

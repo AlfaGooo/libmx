@@ -12,22 +12,3 @@ void mx_push_front(t_list **list, void *data){
         }
     }
 }
-
-// void mx_push_front(t_list **list, void *data)
-// {
-// 	t_list *i;
-// 	if(*list)
-// 	{
-// 		i = mx_create_node(data);
-// 		i->next = *list;
-// 		*list = i;
-// 	}
-// 	else
-// 	{
-// 		*list = mx_create_node(data);
-// 	}
-	
-// }
-
-//https://www.geeksforgeeks.org/listpush_front-listpush_back-c-stl/
-
