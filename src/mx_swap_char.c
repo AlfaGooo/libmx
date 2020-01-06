@@ -1,9 +1,9 @@
 #include "../inc/libmx.h"
  
 void mx_swap_char(char *s1, char *s2) {
-    char *swp;
-    
-    swp = s1;
-    s1 = s2;
-    s2 = swp;
+    char swap;
+
+	swap = *s1;
+	*s1 = *s2;
+	*s2 = swap;
 }

@@ -1,6 +1,5 @@
 #include "../inc/libmx.h"
 
-//int mx_num_len
 static int	count(int num) {
 	int i = 0;
 

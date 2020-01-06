@@ -1,6 +1,5 @@
 #include "../inc/libmx.h"
 
-//cравнения массивов
 int mx_memcmp(const void *s1, const void *s2, size_t n) {
 	unsigned char *mass1 = (unsigned char*) s1;
 	unsigned char *mass2 = (unsigned char*) s2;

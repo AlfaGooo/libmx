@@ -5,7 +5,10 @@ static void print_uc(int c, int a, int b, int i) {
 
     for (int j = i; j >= 0; j--) {
         s = 0;
-        s = j == i ? (char)((c >> (6 * j)) & a) | b : (char)((c >> (6 * j)) & 63) | 128;
+        if (s == i || j == i)
+            s = (char)((c >> (6 * j)) & a) | b;
+        else
+            s = (char)((c >> (6 * j)) & 63) | 128;
         write(1, &s, 1);
     }
 }

@@ -12,7 +12,7 @@
 typedef struct s_list {
     void *data;
     struct s_list *next;
-} t_list;
+}   t_list;
 
 void mx_printchar(char c);
 void mx_print_unicode(wchar_t c);
@@ -77,6 +77,7 @@ int mx_count_words(const char *str, char c);
 char *mx_strchr(const char *str, char c);
 size_t mx_msize(void * p);
 char *mx_strncat(char *s1, const char *s2, size_t len);
+void mx_swap_qsort(char *s1, char *s2);
 
 #endif
 
