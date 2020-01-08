@@ -1,5 +1,18 @@
 #include "../inc/libmx.h"
 
+static void print_uc(int c, int a, int b, int i);
+
+void mx_print_unicode(wchar_t c) {
+    if (c < 128)
+        write(1, &c, 1);
+    else if (c < 2048)
+        print_uc((int)c, 31, 192, 1);
+    else if (c < 65536)
+        print_uc((int)c, 15, 224, 2);
+    else
+        print_uc((int)c, 7, 240, 3);
+}
+
 static void print_uc(int c, int a, int b, int i) {
     char s;
 
@@ -11,15 +24,4 @@ static void print_uc(int c, int a, int b, int i) {
             s = (char)((c >> (6 * j)) & 63) | 128;
         write(1, &s, 1);
     }
-}
-
-void mx_print_unicode(wchar_t c) {
-    if (c < 128)
-        write(1, &c, 1);
-    else if (c < 2048)
-        print_uc((int)c, 31, 192, 1);
-    else if (c < 65536)
-        print_uc((int)c, 15, 224, 2);
-    else
-        print_uc((int)c, 7, 240, 3);
 }

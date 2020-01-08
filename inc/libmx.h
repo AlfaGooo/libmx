@@ -73,9 +73,7 @@ void mx_pop_back(t_list **head);
 t_list *mx_sort_list(t_list *lst, bool (*cmp)(void *, void *));
 int mx_count_words(const char *str, char c);
 
-
 char *mx_strchr(const char *str, char c);
-size_t mx_msize(void * p);
 char *mx_strncat(char *s1, const char *s2, size_t len);
 void mx_swap_qsort(char *s1, char *s2);
 

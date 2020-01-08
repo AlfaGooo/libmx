@@ -9,8 +9,8 @@ int mx_sqrt(int x) {
         x -= i;
         i += 2;
         result += x < 0 ? 0 : 1;
-    }    
+    }
     if (result * result != num)
-        return 0; 
+        return 0;
     return result;
 }
