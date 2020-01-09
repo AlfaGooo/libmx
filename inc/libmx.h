@@ -8,6 +8,7 @@
 #include <stdbool.h>
 #include <string.h>
 #include <fcntl.h>
+#include <malloc/malloc.h>
 
 typedef struct s_list {
     void *data;
@@ -76,17 +77,7 @@ int mx_count_words(const char *str, char c);
 char *mx_strchr(const char *str, char c);
 char *mx_strncat(char *s1, const char *s2, size_t len);
 void mx_swap_qsort(char *s1, char *s2);
+int mx_def_end(const char *str, int size);
+int mx_def_start(const char *str, int size);
 
 #endif
-
-/*
-int mx_minimal(int a, int b);
-int mx_maximum(int a, int b);
-int mx_count_arr_el(char **arr);
-bool mx_isalpha(int c);
-int mx_min(int *arr, int len);
-bool mx_isdigit(int c);
-int mx_atoi(const char *str);
-
-*/
-

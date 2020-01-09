@@ -1,6 +1,5 @@
 #include "../inc/libmx.h"
 
-//возвращает первое вхождения в строку
 char *mx_strstr(const char *haystack, const char *needle) {
     size_t n = mx_strlen(needle);
 

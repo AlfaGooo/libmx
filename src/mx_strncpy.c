@@ -5,7 +5,7 @@ char *mx_strncpy(char *dst, const char *src, int len) {
 
     for (; src[i] && i < len; i++)
         dst[i] = src[i];
-	for (; i < len; i++)
-		dst[i]='\0';
+    for (; i < len; i++)
+        dst[i]='\0';
     return dst;
 }
