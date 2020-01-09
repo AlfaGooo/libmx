@@ -13,17 +13,3 @@ int mx_count_words(const char *str, char c) {
     }
     return count;
 }
-
-// int mx_count_words(const char *str, char c) {
-//     int count = 0;
-
-//     if (!(str--))
-//         return -1;
-//     if(str[0] == '\0')
-//         return 0;
-//     while (*(++str)) {
-//         if ((*str != c) && ++count && !(str = mx_strchr(str, c)))
-//             return count;
-//     }
-//     return count;
-// }
