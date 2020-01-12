@@ -42,11 +42,11 @@ install:
 	@cp $(SRCOB) $(DIR)
 	@ar -rcs libmx.a $(OBJ)
 
-uninstall: clean
+uninstall:
 	@rm -rf $(NAME)
 
 clean:
 	@rm -rf $(SRCOB)
 	@rm -rf $(DIR)
 
-reinstall: uninstall install
+reinstall: uninstall install clean
