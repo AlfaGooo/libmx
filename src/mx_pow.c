@@ -5,7 +5,7 @@ double mx_pow(double n, unsigned int pow) {
 
     if (pow == 0)
         res = 1;
-    for (unsigned int a = 1; a <= pow; a++)
+    for (unsigned int a = 1; a < pow; a++)
         res = res * n;
     return res;
 }

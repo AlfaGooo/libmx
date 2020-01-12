@@ -37,7 +37,7 @@ CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
 all: install clean
 
 install:
-	@mkdir obj
+	@mkdir -p obj
 	@clang $(CFLAGS) -c $(SRC)
 	@cp $(SRCOB) $(DIR)
 	@ar -rcs libmx.a $(OBJ)
