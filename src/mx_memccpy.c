@@ -2,11 +2,18 @@
 
 void *mx_memccpy(void *restrict dst, const void *restrict src,
 int c, size_t n) {
-    unsigned char *dst2 = (unsigned char *)dst;
-    unsigned char *src2 = (unsigned char *)src;
+    char *res = NULL;
+    char *d = (char*)dst;
+    char *s = (char*)src;
+    unsigned long a;
 
-    for (; n; n--, ++dst2, ++src2)
-        if ((*dst2 = *src2) == (unsigned char)c)
-            return dst2;
-    return NULL;
+    for (a = 0; a < n; a++) {
+        if (s[a] != c)
+            d[a] = s[a];
+        else if (s[a] == c) {
+            d[a] = s[a];
+            return &d[a + 1];
+        }
+    }
+    return res;
 }

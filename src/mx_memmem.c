@@ -13,12 +13,12 @@ const void *little, size_t little_len) {
         return b;   
     if(!big || !little || big_len==0 || big_len < little_len)
         return NULL;
-    m=memmem_dop(b, big_len, l, little_len);
+    m = memmem_dop(b, big_len, l, little_len);
     return m;
 }
 
 static char *memmem_dop(char *b, size_t big_len,
-                        char *l, size_t little_len) {
+char *l, size_t little_len) {
     int p = 0;
     char *m = NULL;
 
